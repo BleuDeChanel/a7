@@ -53,4 +53,3 @@ void Node_print(void* thisv) {
   if (this->right != NULL)
     this->class->print(this->right);
 }
-

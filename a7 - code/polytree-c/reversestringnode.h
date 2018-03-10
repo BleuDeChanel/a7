@@ -1,7 +1,6 @@
 #ifndef __REVERSESTRINGNODE_H__
 #define __REVERSESTRINGNODE_H__
 
-// TODO
 
 struct ReverseStringNode_class {
   struct Node_class* super;
