@@ -7,6 +7,7 @@ struct LoggingStringnode_class {
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
   void (*print)     (void*);
+  void (*delete)    (void*);
 };
 extern struct LoggingStringnode_class LoggingStringnode_class_table;
 

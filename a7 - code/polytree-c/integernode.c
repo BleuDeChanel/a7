@@ -18,7 +18,7 @@ void IntegerNode_ctor(void* thisv, char* s) {
   printf("IntegerNode_ctor before Node_ctor \n");
   Node_ctor(this);
   printf("IntegerNode_ctor after Node_ctor \n");
-  *(this->i) = atoi(s); // problem...
+  this->i = s;
   printf("IntegerNode_ctor after atoi(s) \n");
 }
 
@@ -44,7 +44,7 @@ void IntegerNode_printNode(void* thisv) {
 
 int IntegerNode_sum(void* thisv) {
   struct IntegerNode* this = thisv;
-  int sum = *(this->i);
+  int sum = atoi(this->i);
   if (this->left != NULL) {
     sum += IntegerNode_sum(this->left);
   }

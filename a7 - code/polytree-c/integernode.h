@@ -26,7 +26,7 @@ struct IntegerNode {
   struct IntegerNode* right;
 
   // instance variables defined in this class
-  int* i;
+  char* i;
 };
 
 /**

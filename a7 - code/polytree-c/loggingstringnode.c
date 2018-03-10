@@ -12,14 +12,15 @@ struct LoggingStringnode_class LoggingStringnode_class_table = {
   StringNode_printNode,
   Node_print_insert, // override it
   Node_print,
+  Node_delete,
 };
 
 // print “insert x” each time insert is called
 void Node_print_insert(void* thisv, void* nodev) {
   struct LoggingStringnode* this = thisv;
   struct LoggingStringnode* node = nodev;
-  Node_insert(this, node);
   printf("insert %s\n", node->s);
+  Node_insert(this, node);
 }
 
 void* new_LoggingStringnode(char* s) {
