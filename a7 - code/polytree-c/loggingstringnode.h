@@ -2,7 +2,7 @@
 #define __LOGGINGSTRINGNODE_H__
 
 struct LoggingStringnode_class {
-  struct Node_class* super;
+  struct StringNode_class* super;
   int  (*compareTo) (void*, void*);
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
@@ -26,7 +26,7 @@ struct LoggingStringnode {
 };
 
 // override so it prints what's being inserted
-void Node_print_insert(void* thisv, void* nodev)
+void Node_print_insert(void*, void*);
 
 /**
  * definition of new for class

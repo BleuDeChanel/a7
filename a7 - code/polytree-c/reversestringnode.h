@@ -3,7 +3,7 @@
 
 
 struct ReverseStringNode_class {
-  struct Node_class* super;
+  struct StringNode_class* super;
   int  (*compareTo) (void*, void*);
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
