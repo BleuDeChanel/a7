@@ -10,6 +10,7 @@ struct StringNode_class StringNode_class_table = {
   StringNode_printNode,
   Node_insert,
   Node_print,
+  Node_delete,
 };
 
 void StringNode_ctor(void* thisv, char* s) {

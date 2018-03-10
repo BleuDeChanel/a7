@@ -11,6 +11,7 @@ struct Node_class Node_class_table = {
   NULL,  /* abstract printNode* */
   Node_insert,
   Node_print,
+  Node_delete,
 };
 
 /**
@@ -52,4 +53,14 @@ void Node_print(void* thisv) {
   this->class->printNode(this);
   if (this->right != NULL)
     this->class->print(this->right);
+}
+
+// delete
+void Node_delete(void* thisv) {
+  struct Node* this = thisv;
+  if (this->left != NULL)
+    Node_delete(this->left);
+  if (this->right != NULL)
+    Node_delete(this->right);
+  free(this);
 }

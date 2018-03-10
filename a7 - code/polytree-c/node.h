@@ -10,6 +10,7 @@ struct Node_class {
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
   void (*print)     (void*);
+  void (*delete)    (void*); // do sub classes should now include this?
 };
 extern struct Node_class Node_class_table;
 
@@ -32,5 +33,6 @@ struct Node {
 void Node_ctor(void*);
 void Node_insert(void*, void*);
 void Node_print(void*);
+void Node_delete(void*);
 
 #endif  /*__NODE_H__*/

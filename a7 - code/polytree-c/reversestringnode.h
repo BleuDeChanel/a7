@@ -8,6 +8,7 @@ struct ReverseStringNode_class {
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
   void (*print)     (void*);
+  void (*delete)    (void*);
 };
 extern struct ReverseStringNode_class ReverseStringNode_class_table;
 

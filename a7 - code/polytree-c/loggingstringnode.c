@@ -20,7 +20,6 @@ void Node_print_insert(void* thisv, void* nodev) {
   struct LoggingStringnode* node = nodev;
   Node_insert(this, node);
   printf("insert %s\n", node->s);
-// thisC->super->insert(this,node);
 }
 
 void* new_LoggingStringnode(char* s) {
