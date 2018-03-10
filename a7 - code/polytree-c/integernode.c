@@ -9,21 +9,18 @@ struct IntegerNode_class IntegerNode_class_table = {
   IntegerNode_printNode,
   Node_insert,
   Node_print,
+  IntegerNode_sum,
   Node_delete,
 };
 
 void IntegerNode_ctor(void* thisv, char* s) {
-  printf("inside of IntegerNode_ctor \n");
   struct IntegerNode* this = thisv;
-  printf("IntegerNode_ctor before Node_ctor \n");
   Node_ctor(this);
-  printf("IntegerNode_ctor after Node_ctor \n");
   this->i = s;
-  printf("IntegerNode_ctor after atoi(s) \n");
 }
 
+// made my own since I wasn't sure if we're allowed to include <string.h>
 int IntegerNode_compareTo(void* thisv, void* nodev) {
-  printf("inside of IntegerNode_compareTo \n");
   struct IntegerNode* this = thisv;
   struct IntegerNode* node = nodev;
   if (*(this->i) < *(node->i)) {
@@ -55,7 +52,6 @@ int IntegerNode_sum(void* thisv) {
 }
 
 void* new_IntegerNode(char* s) {
-  printf("inside of new_IntegerNode \n");
   struct IntegerNode* obj = malloc(sizeof(struct IntegerNode));
   obj->class = &IntegerNode_class_table;
   IntegerNode_ctor(obj, s);

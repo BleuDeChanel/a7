@@ -10,6 +10,7 @@ struct IntegerNode_class {
   void (*printNode) (void*);
   void (*insert)    (void*, void*);
   void (*print)     (void*);
+  int  (*sum)       (void*);
   void (*delete)    (void*);
 };
 extern struct IntegerNode_class SIntegerNode_class_table;
