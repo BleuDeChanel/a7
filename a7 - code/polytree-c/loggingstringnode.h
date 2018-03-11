@@ -1,7 +1,7 @@
 #ifndef __LOGGINGSTRINGNODE_H__
 #define __LOGGINGSTRINGNODE_H__
 
-struct LoggingStringnode_class {
+struct LoggingStringNode_class {
   struct StringNode_class* super;
   int  (*compareTo) (void*, void*);
   void (*printNode) (void*);
@@ -9,18 +9,18 @@ struct LoggingStringnode_class {
   void (*print)     (void*);
   void (*delete)    (void*);
 };
-extern struct LoggingStringnode_class LoggingStringnode_class_table;
+extern struct LoggingStringNode_class LoggingStringnode_class_table;
 
 /**
  * struct definition of object
  */
-struct LoggingStringnode;
-struct LoggingStringnode {
-  struct LoggingStringnode_class* class;
+struct LoggingStringNode;
+struct LoggingStringNode {
+  struct LoggingStringNode_class* class;
 
   // instance variables defined in super class(es)
-  struct LoggingStringnode* left;
-  struct LoggingStringnode* right;
+  struct LoggingStringNode* left;
+  struct LoggingStringNode* right;
 
   // instance variables defined in this class
   char* s;
@@ -32,6 +32,6 @@ void Node_print_insert(void*, void*);
 /**
  * definition of new for class
  */
-void* new_LoggingStringnode(char*);
+void* new_LoggingStringNode(char*);
 
 #endif /*__LOGGINGSTRINGNODE_H__*/

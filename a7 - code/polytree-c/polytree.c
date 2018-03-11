@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
       else if (strcmp(argv[1], "r") == 0)
         node = new_ReverseStringNode(argv[i]);
       else if (strcmp(argv[1], "l") == 0)
-        node = new_LoggingStringnode(argv[i]);
+        node = new_LoggingStringNode(argv[i]);
       if (node != NULL) {
         if (tree == NULL)
           tree = node;
